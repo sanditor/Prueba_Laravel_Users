@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 31-08-2019 a las 05:14:54
+-- Tiempo de generación: 31-08-2019 a las 22:26:37
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.14
 
@@ -38,23 +38,23 @@ CREATE TABLE IF NOT EXISTS `hobbies` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_hobbies_users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `hobbies`
 --
 
 INSERT INTO `hobbies` (`id`, `user_id`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 4, 'Jugar Futboll', 'Deporte de contacto', '2019-08-25 21:19:39', '2019-08-31 03:00:00'),
-(2, 4, 'Tennis', 'Hermoso', '2019-08-25 21:44:22', '2019-08-31 03:09:24'),
+(1, 29, 'Jugar Futbol', 'Deporte brusco', '2019-08-25 21:19:39', '2019-08-31 13:40:04'),
+(2, 4, 'Tennis', 'Deporte blanco', '2019-08-25 21:44:22', '2019-08-31 14:00:51'),
 (3, 4, 'Baloncesto', 'Deporte de mucha concentración', '2019-08-25 21:53:23', '2019-08-31 02:57:38'),
-(4, 4, 'Ciclismo', 'Deporte Bello', '2019-08-25 21:56:56', '2019-08-25 21:56:56'),
-(5, 4, 'Billar', 'Deporte de Precion', '2019-08-25 22:26:30', '2019-08-25 22:26:30'),
-(7, 4, 'Natacion', 'Deporte de Mucha aire', '2019-08-25 22:40:30', '2019-08-25 22:40:30'),
-(8, 4, 'Canotaje', 'Deporte de Agilidad', '2019-08-25 22:49:31', '2019-08-26 16:17:31'),
-(9, 5, 'Atletismo', 'Deporte', '2019-08-26 01:28:24', '2019-08-31 05:04:21'),
-(10, 4, 'Ciclismo', 'Deporte de moda', '2019-08-26 15:56:41', '2019-08-30 23:16:55'),
-(12, 4, 'nadar', 'Hermoso deporte', '2019-08-30 00:17:41', '2019-08-30 00:17:41');
+(4, 29, 'Ciclismo', 'Deporte de cardio', '2019-08-25 21:56:56', '2019-08-31 13:39:45'),
+(5, 4, 'Billar', 'Deporte de precision', '2019-08-25 22:26:30', '2019-08-31 13:58:05'),
+(7, 29, 'Natacion', 'Deporte de saber respirar', '2019-08-25 22:40:30', '2019-08-31 21:35:43'),
+(8, 4, 'Canotaje', 'Deporte de agilidad', '2019-08-25 22:49:31', '2019-08-31 21:44:06'),
+(10, 29, 'Ciclismo', 'Deporte de moda', '2019-08-26 15:56:41', '2019-08-30 23:16:55'),
+(12, 4, 'nadar', 'Hermoso deporte', '2019-08-30 00:17:41', '2019-08-30 00:17:41'),
+(13, 29, 'Rana', 'juego Popular', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -138,8 +138,7 @@ CREATE TABLE IF NOT EXISTS `role_user` (
 INSERT INTO `role_user` (`id`, `user_id`, `role_id`, `created_at`, `updated_at`) VALUES
 (1, 18, 1, NULL, NULL),
 (2, 19, 2, NULL, NULL),
-(10, 4, 1, NULL, NULL),
-(11, 5, 2, NULL, NULL),
+(11, 4, 2, NULL, NULL),
 (13, 29, 1, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -169,10 +168,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `role`, `name`, `username`, `email`, `city`, `hobbies`, `password`, `created_at`, `updated_at`, `remember_token`) VALUES
-(4, 'Admin', 'Sandor', 'sanditor', 'sanditor@sanditor.com', 'Bogota', 'Jugar Baloncesto', '$2y$10$Del1t0VOu37RjhfXHJe8su9w16xMr5Idimz9rzaGAfsfy1m7tRvyG', '2019-08-25 18:57:49', '2019-08-28 01:14:08', 'tTjnbiq5Zbe0UcqLAk2EcSGvWfz51PrfCx8q6JywFG3n0UdMkILTVexSOBkx'),
-(5, 'User', 'Carlos', 'Carlos', 'carlitos@carlitos.com', 'Bogota', 'Montar cicla', '$2y$10$HjmHnoqEIRQU1d8Ixomlru5waTgK3n2uMnQKZsttdUBp6La5CIAf2', '2019-08-25 22:57:12', '2019-08-29 19:09:19', 'sCQNPX7geZhRVd57US35KFmSx2qslPNAAajtfYL1lNSIFq54oIGSxFP9RJ4O'),
-(19, 'User', 'User', 'Usuario', 'user@user.com', 'Bogota', 'Estudiar', '$2y$10$2iZ.Gno.1nxlenYx6tseDOps/tcsbOChvq0QpQY80RC19a9MaLSfC', '2019-08-28 02:31:36', '2019-08-28 02:31:36', 'X1n8PG8Qc5eQkWUytJKFOC5IKKxnDxz92EKhP5NovpxbCuR47Cw1wV1YJh0s'),
-(29, 'Admin', 'santi', 'Santiago', 'santi@santi.com', 'Bogota', 'Dormir y comer', '$2y$10$F4p2mzx9SkA3TbT1UvHYyee1Gy5gPNHhgZcCzz8Hl4S/9w4Oslp/m', '2019-08-29 20:20:20', '2019-08-29 20:20:20', NULL);
+(4, 'User', 'Carlos', 'Carlos', 'carlitos@carlitos.com', 'Bogota', 'Montar cicla', '$2y$10$HGj31iZlDJ5Ybdme011KvOiQKhCZkla8JL/PJZZamVmS/Un2R00L.', '2019-08-25 18:57:49', '2019-08-31 15:45:57', 'G1SeqoCdQ0BjBkaZIXZ7GS6etRlY2oEiJYPIypOMYUjUOd3bPFYblTkJZ8RF'),
+(29, 'Admin', 'santi', 'Santiago', 'santi@santi.com', 'Bogota', 'Dormir y comer', '$2y$10$F4p2mzx9SkA3TbT1UvHYyee1Gy5gPNHhgZcCzz8Hl4S/9w4Oslp/m', '2019-08-29 20:20:20', '2019-08-29 20:20:20', 'x07JvMDh5R4tbzDNtkxbWFP81gU0qk7ljDB2qXBZdU50qavmW52VhkamYCDv');
 
 --
 -- Restricciones para tablas volcadas
