@@ -1,7 +1,7 @@
 -- //crear una nueva base de datos
-Drop DATABASE Prueba2_Laravel;
-CREATE DATABASE IF NOT EXISTS Prueba2_Laravel;
-USE Prueba2_Laravel;
+Drop DATABASE Prueba_Laravel;
+CREATE DATABASE IF NOT EXISTS; Prueba_Laravel;
+USE Prueba_Laravel;
 
 CREATE TABLE IF NOT EXISTS users(
 id              int(255) auto_increment not null,

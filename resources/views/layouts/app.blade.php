@@ -28,8 +28,8 @@
 </head>
 
 <body>
-    <!-- <div id="app"> -->
-    <nav class="navbar fixed-top navbar-expand-lg bg-secondary p-0">
+    <div id="app">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-secondary p-0">
         <div class="container">
             <div class="row">
                 <a class="navbar-brand m-0" href="{{ url('/') }}">
@@ -104,7 +104,7 @@
     <main class="py-4">
         @yield('content')
     </main>
-    <!-- </div> -->
+    </div>
 </body>
 
 </html>
