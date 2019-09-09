@@ -7,7 +7,23 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+<h1 align="center">Proyecto Usuarios</h1>
+
+## Esta aplicacion es para agregar pasatiempos, configurar perfiles, agregar nuevos usuarios. Tener permisos con roles. Esta programada con Laravel 5.6. 
+
 ##Instrucciones
+
+1. Clonar el repositorio en la carpeta www(wampserver), httdocs(xampp).
+2. Ejecutar la sentencia sql que esta dentro de la carpeta de la raiz del proyecto llamada ScriptBBDD en php admin de msql.
+3. Instalar composer (https://getcomposer.org/)
+4. Abrir la consola de windows, linux o la de su preferencia en la carpeta del proyecto descargado en el punto 1.
+5. Teclear: php artisan migrate:refresh -seed. Para ejecutar el seeders(roles).
+6. Teclear: php artisan migrate. Para ejecutar las migraciones.
+7. Teclear: php artisan serve. Para ejecutar el proyecto.
+8. Abir el navegador de su preferencia y teclear en la url: localhost:8000
+9. Iniciar sesion con las siguientes credenciales:
+    email: admin@admin.com
+    password: 123456
 
 ## Contributing
 
