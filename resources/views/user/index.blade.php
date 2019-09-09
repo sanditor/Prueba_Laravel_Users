@@ -2,17 +2,17 @@
 
 @section('content')
 <div class="container">
-<div class="title m-b-md m-5">
-    <div class="text-center">
-        <h2>Listado De Usuarios</h2>
+    <div class="title m-b-md m-5">
+        <div class="text-center">
+            <h2>Listado De Usuarios</h2>
+        </div>
+        <hr />
     </div>
-    <hr />
-</div>
     <div class="row justify-content-center p-2">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title text-center p-1">Buscador Usuarios</h4>
-                <form method="Get" action="{{ route('user.index') }}" enctype="multipart/form-data" id="buscador">
+                <form method="Get" action="{{ route('user.index') }}" id="buscador">
                     @csrf
                     <div class="row p-3">
                     <div class="form-group col-9">
@@ -57,5 +57,6 @@
             </div>
         </div>
         @endforeach
+    </div>
     </div>
     @endsection
